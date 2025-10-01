@@ -1,0 +1,177 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facilitar los Cambios</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header, footer { background: #005f73; color: white; padding: 2rem; text-align: center; }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    h2 { color: #005f73; }
+    ul, ol { padding-left: 1.2rem; }
+    li::marker { color: #0a9396; }
+    img { width: 100%; height: auto; margin: 1rem 0; border-radius: 8px; }
+    .cta { background: #0a9396; color: white; padding: 1rem; text-align: center; margin-top: 2rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #005f73; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #007f7f; transform: scale(1.05); transition: 0.3s; }
+
+    /* Animaciones */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-in-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Botón flotante de música */
+    #musicToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0a9396;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    #musicToggle:hover {
+      background: #007f7f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>El Arte y la Ciencia de facilitar los cambios</h1>
+    <p>Procesos - Personas - Tecnología</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Team_collaboration_whiteboard.jpg" alt="Personas colaborando frente a una pizarra" />
+  </header>
+
+  <section id="problemas" class="fade-in">
+    <h2>¿Qué problemas resolvemos?</h2>
+    <ul>
+      <li>Los usuarios no completan compras en tu app</li>
+      <li>Los procesos entre equipos no fluyen</li>
+      <li>Necesitás crear o rediseñar un área</li>
+      <li>Querés mejorar la experiencia digital</li>
+    </ul>
+  </section>
+
+  <section id="metodologia" class="fade-in">
+    <h2>Metodología</h2>
+    <ol>
+      <li>Diagnóstico de la situación actual</li>
+      <li>Propuesta de mejora</li>
+      <li>Definición de métricas</li>
+      <li>Implementación</li>
+      <li>Seguimiento</li>
+    </ol>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Digital_transformation_process_diagram.png" alt="Diagrama de transformación digital" />
+  </section>
+
+  <section class="fade-in">
+    <h2>Enfoque humano</h2>
+    <ul>
+      <li>Empatía</li>
+      <li>Investigación</li>
+      <li>Preguntas poderosas</li>
+      <li>Trabajo cooperativo</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Teamwork_collaboration.jpg" alt="Equipo diverso trabajando en conjunto" />
+  </section>
+
+  <section class="fade-in">
+    <h2>Clientes ideales</h2>
+    <ul>
+      <li>Consultoras de IT</li>
+      <li>PYMES</li>
+      <li>Aseguradoras</li>
+      <li>Multinacionales</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Business_logos_collage.jpg" alt="Logos de empresas y consultoras" />
+  </section>
+
+  <section class="fade-in">
+    <h2>Sobre mí</h2>
+    <p>Trabajo junto a las personas que el cliente disponga para cada etapa. Si hay varios proyectos, contrato colaboradores puntuales.</p>
+    <p>Compito con consultoras como Accenture y Price. A diferencia de ellas, armo equipos funcionales y dinámicas de trabajo sostenibles.</p>
+  </section>
+
+  <section class="fade-in">
+    <h2>Indicadores de éxito</h2>
+    <ul>
+      <li>Que te contacten para cotizar</li>
+      <li>Que te convoquen desde consultoras</li>
+      <li>Que concretes proyectos</li>
+      <li>Que te inviten a dar charlas</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="fade-in">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu email" required />
+      <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Digital_contact_form_icon.png" alt="Formulario de contacto digital" />
+  </section>
+
+  <div class="cta">
+    <a href="#contacto" style="text-decoration:none;">
+      <button>💬 Conectemos</button>
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Facilitar los Cambios</p>
+  </footer>
+
+  <!-- Música relajante en segundo plano -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-fma/music/no_curator/Lee_Rosevere/Relaxation_Sessions/Lee_Rosevere_-_06_-_Breathing_Light.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!-- Botón flotante para controlar la música -->
+  <div id="musicToggle" onclick="toggleMusic()" title="Activar/Desactivar música">
+    🔈
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const toggle = document.getElementById("musicToggle");
+    let isPlaying = true;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+        toggle.textContent = "🔇";
+      } else {
+        music.play();
+        toggle.textContent = "🔈";
+      }
+      isPlaying = !isPlaying;
+    }
+
+    // Animaciones al hacer scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+</html>
